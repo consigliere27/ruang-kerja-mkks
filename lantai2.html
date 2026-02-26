@@ -1,0 +1,287 @@
+<!DOCTYPE html>
+<html lang="id">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Denah BMN MKKS 2026 — Lantai 2</title>
+    <link rel="stylesheet" href="style.css">
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+</head>
+
+<body>
+
+    <div class="page-wrapper">
+        <header>
+            <a href="index.html" class="back-link">← Kembali ke Beranda</a>
+            <h1>🏢 Denah BMN Biro MKKS — Lantai 2</h1>
+            <p class="subtitle">Klik pada meja atau ruangan untuk melihat detail inventaris</p>
+        </header>
+
+        <div class="floor-plan-container">
+            <div class="lt2-grid-plan">
+
+                <!-- =============================================
+                     TOP HALF: Kitchen/Pantry + Desk K1-K8
+                     ============================================= -->
+                <div class="lt2-upper">
+
+                    <!-- LEFT: Wastafel + Kulkas + Dispenser + Microwave -->
+                    <div class="lt2-pantry-zone">
+                        <!-- Wastafel - tall left block -->
+                        <div class="lt2-wastafel-block item furniture clickable" data-id="lt2-wastafel"
+                            data-label="Wastafel" data-pj="-" data-spek="Wastafel Area Dapur" data-status="Baik">
+                            <span class="lt2-big-icon">🚰</span>
+                            Wastafel
+                        </div>
+
+                        <!-- Right side of pantry -->
+                        <div class="lt2-pantry-right">
+                            <div class="lt2-pantry-top-items">
+                                <div class="item furniture clickable" data-id="lt2-kulkas" data-label="Kulkas"
+                                    data-pj="-" data-spek="Kulkas" data-status="Baik">
+                                    🧊 Kulkas
+                                </div>
+                            </div>
+                            <div class="lt2-pantry-appliances">
+                                <div class="item furniture clickable lt2-vertical-label" data-id="lt2-dispenser"
+                                    data-label="Dispenser" data-pj="-" data-spek="Dispenser Air" data-status="Baik">
+                                    <span class="lt2-yellow-tag">💧</span>
+                                    D<br>i<br>s<br>p<br>e<br>n<br>s<br>e<br>r
+                                </div>
+                                <div class="item furniture clickable lt2-vertical-label" data-id="lt2-microwave"
+                                    data-label="Microwave" data-pj="-" data-spek="Microwave" data-status="Baik">
+                                    M<br>i<br>c<br>r<br>o<br>w<br>a<br>v<br>e
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- CENTER-RIGHT: Desk cluster K1-K8 -->
+                    <div class="lt2-desk-zone-upper">
+                        <div class="lt2-desk-grid-upper">
+                            <!-- Row 1: K1 | Meja Besar | K2 -->
+                            <div class="lt2-desk-pair premium-group">
+                                <div class="premium-card clickable" data-id="lt2-k1" data-label="Komputer K1"
+                                    data-pj="Staf K1" data-spek="Komputer K1" data-status="Baik">
+                                    <span class="premium-icon pc">🖥️</span><strong>K1</strong>
+                                </div>
+                                <div class="lt2-meja-center-cell lt2-meja-center-top room-block clickable"
+                                    data-id="lt2-meja-besar-1" data-label="Meja Tengah Atas" data-pj="-"
+                                    data-spek="Meja Besar (Tengah Atas)" data-status="Baik">
+                                    <strong>Meja Besar</strong>
+                                </div>
+                                <div class="premium-card clickable" data-id="lt2-k2" data-label="Komputer K2"
+                                    data-pj="Staf K2" data-spek="Komputer K2" data-status="Baik">
+                                    <span class="premium-icon pc">🖥️</span><strong>K2</strong>
+                                </div>
+                            </div>
+                            <!-- Row 2: K4 | Meja Besar | K3 -->
+                            <div class="lt2-desk-pair premium-group">
+                                <div class="premium-card clickable" data-id="lt2-k4" data-label="Komputer K4"
+                                    data-pj="Staf K4" data-spek="Komputer K4" data-status="Baik">
+                                    <span class="premium-icon pc">🖥️</span><strong>K4</strong>
+                                </div>
+                                <div class="lt2-meja-center-cell lt2-meja-center-mid"></div>
+                                <div class="premium-card clickable" data-id="lt2-k3" data-label="Komputer K3"
+                                    data-pj="Staf K3" data-spek="Komputer K3" data-status="Baik">
+                                    <span class="premium-icon pc">🖥️</span><strong>K3</strong>
+                                </div>
+                            </div>
+                            <!-- Row 3: K5 | Meja Besar | K6 -->
+                            <div class="lt2-desk-pair premium-group">
+                                <div class="premium-card clickable" data-id="lt2-k5" data-label="Komputer K5"
+                                    data-pj="Staf K5" data-spek="Komputer K5" data-status="Baik">
+                                    <span class="premium-icon pc">🖥️</span><strong>K5</strong>
+                                </div>
+                                <div class="lt2-meja-center-cell lt2-meja-center-mid"></div>
+                                <div class="premium-card clickable" data-id="lt2-k6" data-label="Komputer K6"
+                                    data-pj="Staf K6" data-spek="Komputer K6" data-status="Baik">
+                                    <span class="premium-icon pc">🖥️</span><strong>K6</strong>
+                                </div>
+                            </div>
+                            <!-- Row 4: K7 | Meja Besar | Empty -->
+                            <div class="lt2-desk-pair premium-group">
+                                <div class="premium-card clickable" data-id="lt2-k7" data-label="Komputer K7"
+                                    data-pj="Staf K7" data-spek="Komputer K7" data-status="Baik">
+                                    <span class="premium-icon pc">🖥️</span><strong>K7</strong>
+                                </div>
+                                <div class="lt2-meja-center-cell lt2-meja-center-mid"></div>
+                                <div class="lt2-empty-cell"></div>
+                            </div>
+                            <!-- Row 5: K8 | Meja Besar | Empty -->
+                            <div class="lt2-desk-pair premium-group">
+                                <div class="premium-card clickable" data-id="lt2-k8" data-label="Komputer K8"
+                                    data-pj="Staf K8" data-spek="Komputer K8" data-status="Baik">
+                                    <span class="premium-icon pc">🖥️</span><strong>K8</strong>
+                                </div>
+                                <div class="lt2-meja-center-cell lt2-meja-center-bot"></div>
+                                <div class="lt2-empty-cell"></div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- FAR RIGHT: Lemari (vertical) -->
+                    <div class="lt2-lemari-col">
+                        <div class="item furniture clickable lt2-lemari-v lt2-lemari-yellow" data-id="lt2-lemari-topR"
+                            data-label="Lemari (Kanan Atas)" data-pj="-" data-spek="Lemari" data-status="Baik">
+                            L<br>e<br>m<br>a<br>r<br>i
+                        </div>
+                    </div>
+                </div>
+
+                <!-- ====== HORIZONTAL DIVIDER ====== -->
+                <div class="lt2-divider"></div>
+
+                <!-- =============================================
+                     BOTTOM HALF: Lemari + Meja 3 + K9-K14 + Meja Kerja 1
+                     ============================================= -->
+                <div class="lt2-lower">
+
+                    <!-- FAR LEFT: Lemari (vertical) -->
+                    <div class="lt2-lemari-col">
+                        <div class="item furniture clickable lt2-lemari-v lt2-lemari-yellow" data-id="lt2-lemari-left"
+                            data-label="Lemari (Kiri)" data-pj="-" data-spek="Lemari" data-status="Baik">
+                            L<br>e<br>m<br>a<br>r<br>i
+                        </div>
+                    </div>
+
+                    <!-- LEFT: Meja 3 (large table) -->
+                    <div class="lt2-meja3-block room-block clickable" data-id="lt2-meja-3" data-label="Meja 3"
+                        data-pj="-" data-spek="Meja Kerja Besar (Meja 3)" data-status="Baik">
+                        <strong>Meja 3</strong>
+                    </div>
+
+                    <!-- CENTER-RIGHT: K9-K14 surrounding Meja Kerja 1 -->
+                    <div class="lt2-desk-zone-lower">
+                        <div class="lt2-lower-grid">
+                            <!-- Row 1 -->
+                            <div class="lt2-lower-row premium-group">
+                                <div class="premium-card clickable" data-id="lt2-k9" data-label="Komputer K9"
+                                    data-pj="Staf K9" data-spek="Komputer K9" data-status="Baik">
+                                    <span class="premium-icon pc">🖥️</span><strong>K9</strong>
+                                </div>
+                                <div class="lt2-meja1-cell lt2-meja1-top room-block clickable"
+                                    data-id="lt2-meja-kerja-1" data-label="Meja Kerja 1" data-pj="-"
+                                    data-spek="Meja Kerja 1 (Bersama)" data-status="Baik">
+                                    <strong>Meja Kerja 1</strong>
+                                </div>
+                                <div class="premium-card clickable" data-id="lt2-k10" data-label="Komputer K10"
+                                    data-pj="Staf K10" data-spek="Komputer K10" data-status="Baik">
+                                    <span class="premium-icon pc">🖥️</span><strong>K10</strong>
+                                </div>
+                            </div>
+                            <!-- Row 2 -->
+                            <div class="lt2-lower-row premium-group">
+                                <div class="premium-card clickable" data-id="lt2-k12" data-label="Komputer K12"
+                                    data-pj="Staf K12" data-spek="Komputer K12" data-status="Baik">
+                                    <span class="premium-icon pc">🖥️</span><strong>K12</strong>
+                                </div>
+                                <div class="lt2-meja1-cell lt2-meja1-mid"></div>
+                                <div class="premium-card clickable" data-id="lt2-k11" data-label="Komputer K11"
+                                    data-pj="Staf K11" data-spek="Komputer K11" data-status="Baik">
+                                    <span class="premium-icon pc">🖥️</span><strong>K11</strong>
+                                </div>
+                            </div>
+                            <!-- Row 3 -->
+                            <div class="lt2-lower-row premium-group">
+                                <div class="premium-card clickable" data-id="lt2-k13" data-label="Komputer K13"
+                                    data-pj="Staf K13" data-spek="Komputer K13" data-status="Baik">
+                                    <span class="premium-icon pc">🖥️</span><strong>K13</strong>
+                                </div>
+                                <div class="lt2-meja1-cell lt2-meja1-bot"></div>
+                                <div class="premium-card clickable" data-id="lt2-k14" data-label="Komputer K14"
+                                    data-pj="Staf K14" data-spek="Komputer K14" data-status="Baik">
+                                    <span class="premium-icon pc">🖥️</span><strong>K14</strong>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- FAR RIGHT: Lemari (vertical) -->
+                    <div class="lt2-lemari-col">
+                        <div class="item furniture clickable lt2-lemari-v lt2-lemari-yellow" data-id="lt2-lemari-rightB"
+                            data-label="Lemari (Kanan Bawah)" data-pj="-" data-spek="Lemari" data-status="Baik">
+                            L<br>e<br>m<br>a<br>r<br>i
+                        </div>
+                    </div>
+                </div>
+
+                <!-- ====== BOTTOM BAR ====== -->
+                <div class="lt2-bottom-strip">
+                    <div class="item furniture small clickable lt2-yellow-item" data-id="lt2-meja-kecil"
+                        data-label="Meja Kecil" data-pj="-" data-spek="Meja Kecil" data-status="Baik">
+                        Meja<br>Kecil
+                    </div>
+                    <div class="premium-card clickable" data-id="lt2-printer-1" data-label="Printer 1" data-pj="-"
+                        data-spek="Printer 1" data-status="Baik">
+                        <span class="premium-icon printer">🖨️</span><strong>Printer 1</strong>
+                    </div>
+                    <div class="premium-card clickable" data-id="lt2-printer-2" data-label="Printer 2" data-pj="-"
+                        data-spek="Printer 2" data-status="Baik">
+                        <span class="premium-icon printer">🖨️</span><strong>Printer 2</strong>
+                    </div>
+                    <div class="lt2-strip-spacer"></div>
+                    <div class="premium-card clickable" data-id="lt2-drawer" data-label="Drawer" data-pj="-"
+                        data-spek="Drawer / Laci" data-status="Baik" style="min-height: auto;">
+                        <span class="premium-icon pc" style="color: #94a3b8; font-size: 1.2rem;">🗄️</span>
+                        <strong>Drawer</strong>
+                    </div>
+                </div>
+
+            </div><!-- end .lt2-grid-plan -->
+        </div><!-- end .floor-plan-container -->
+
+        <!-- Legend -->
+        <div class="legend">
+            <div class="legend-item"><span class="legend-color desk-color"></span> Meja / Komputer</div>
+            <div class="legend-item"><span class="legend-color room-color"></span> Meja Besar / Ruangan</div>
+            <div class="legend-item"><span class="legend-color furniture-color"></span> Furniture</div>
+            <div class="legend-item"><span class="legend-color printer-color"></span> Printer</div>
+            <div class="legend-item"><span class="legend-color lt2-lemari-legend"></span> Lemari</div>
+        </div>
+    </div>
+
+    <!-- Modal -->
+    <div id="info-modal" class="modal">
+        <div class="modal-content">
+            <span class="close-btn">&times;</span>
+            <div class="modal-header-icon">📋</div>
+            <h2 id="modal-title">Nama Item</h2>
+            <div class="modal-body">
+                <div class="detail-item">
+                    <span class="label">📌 Penanggung Jawab</span>
+                    <span id="modal-pj" class="value view-mode">-</span>
+                    <input type="text" id="edit-pj" class="edit-input hidden" placeholder="Nama Penanggung Jawab">
+                </div>
+                <div class="detail-item">
+                    <span class="label">💻 Nomor NUP</span>
+                    <span id="modal-spek" class="value view-mode">-</span>
+                    <input type="text" id="edit-spek" class="edit-input hidden" placeholder="Nomor NUP / Spesifikasi">
+                </div>
+                <div class="detail-item">
+                    <span class="label">📦 Status Barang</span>
+                    <span id="modal-status" class="value status-badge view-mode">-</span>
+                    <select id="edit-status" class="edit-input hidden">
+                        <option value="Baik">Baik</option>
+                        <option value="Perbaikan">Perbaikan</option>
+                        <option value="Rusak">Rusak</option>
+                        <option value="Restricted">Restricted</option>
+                        <option value="N/A">N/A</option>
+                    </select>
+                </div>
+            </div>
+            <div class="modal-actions">
+                <button type="button" id="btn-edit" class="btn btn-primary">✏️ Edit Informasi</button>
+                <div id="save-actions" class="hidden">
+                    <button type="button" id="btn-cancel" class="btn btn-secondary">Batal</button>
+                    <button type="button" id="btn-save" class="btn btn-success">💾 Simpan Perubahan</button>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+
+</html>

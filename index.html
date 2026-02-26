@@ -1,0 +1,366 @@
+<!DOCTYPE html>
+<html lang="id">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Denah BMN MKKS 2026</title>
+    <link rel="stylesheet" href="style.css">
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    <style>
+        /* Landing page inline styles to ensure rendering */
+        .landing-wrapper {
+            min-height: 100vh;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+            padding: 2rem;
+            position: relative;
+            overflow: hidden;
+            background: #0f172a;
+        }
+
+        .landing-bg {
+            position: fixed;
+            inset: 0;
+            pointer-events: none;
+            z-index: 0;
+        }
+
+        .particle {
+            position: absolute;
+            border-radius: 50%;
+            opacity: 0.08;
+            animation: float 20s infinite ease-in-out;
+        }
+
+        .particle-1 {
+            width: 400px;
+            height: 400px;
+            background: radial-gradient(circle, #60a5fa, transparent);
+            top: -100px;
+            left: -100px;
+        }
+
+        .particle-2 {
+            width: 300px;
+            height: 300px;
+            background: radial-gradient(circle, #a78bfa, transparent);
+            bottom: -80px;
+            right: -80px;
+            animation-delay: -5s;
+        }
+
+        .particle-3 {
+            width: 250px;
+            height: 250px;
+            background: radial-gradient(circle, #22c55e, transparent);
+            top: 50%;
+            left: 60%;
+            animation-delay: -10s;
+        }
+
+        .particle-4 {
+            width: 350px;
+            height: 350px;
+            background: radial-gradient(circle, #f59e0b, transparent);
+            top: 30%;
+            right: 70%;
+            animation-delay: -15s;
+        }
+
+        @keyframes float {
+
+            0%,
+            100% {
+                transform: translate(0, 0) scale(1);
+            }
+
+            25% {
+                transform: translate(40px, -30px) scale(1.1);
+            }
+
+            50% {
+                transform: translate(-20px, 50px) scale(0.95);
+            }
+
+            75% {
+                transform: translate(30px, 20px) scale(1.05);
+            }
+        }
+
+        .landing-header {
+            text-align: center;
+            margin-bottom: 3rem;
+            position: relative;
+            z-index: 1;
+        }
+
+        .landing-icon {
+            font-size: 4rem;
+            margin-bottom: 1rem;
+            animation: bounce 2s ease-in-out infinite;
+        }
+
+        @keyframes bounce {
+
+            0%,
+            100% {
+                transform: translateY(0);
+            }
+
+            50% {
+                transform: translateY(-10px);
+            }
+        }
+
+        .landing-title {
+            font-size: 2.5rem;
+            font-weight: 700;
+            background: linear-gradient(135deg, #60a5fa 0%, #a78bfa 50%, #f472b6 100%);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+            background-clip: text;
+            margin-bottom: 0.25rem;
+            letter-spacing: -0.5px;
+        }
+
+        .landing-year {
+            font-size: 1.5rem;
+            font-weight: 300;
+            color: #94a3b8;
+            letter-spacing: 8px;
+            margin-bottom: 1rem;
+        }
+
+        .landing-subtitle {
+            color: #94a3b8;
+            font-size: 1rem;
+            max-width: 500px;
+            margin: 0 auto;
+            line-height: 1.6;
+        }
+
+        .floor-cards {
+            display: flex;
+            gap: 2rem;
+            position: relative;
+            z-index: 1;
+            flex-wrap: wrap;
+            justify-content: center;
+        }
+
+        .floor-card {
+            display: block;
+            position: relative;
+            width: 340px;
+            padding: 2.5rem 2rem;
+            border-radius: 20px;
+            background: rgba(30, 41, 59, 0.7);
+            border: 1px solid rgba(71, 85, 105, 0.4);
+            text-decoration: none;
+            color: #f1f5f9;
+            overflow: hidden;
+            transition: all 0.4s cubic-bezier(0.4, 0, 0.2, 1);
+            backdrop-filter: blur(12px);
+            -webkit-backdrop-filter: blur(12px);
+        }
+
+        .floor-card:hover {
+            transform: translateY(-8px) scale(1.02);
+            border-color: transparent;
+        }
+
+        .floor-card-2:hover {
+            box-shadow: 0 20px 60px rgba(96, 165, 250, 0.25), 0 0 40px rgba(96, 165, 250, 0.1);
+            border-color: rgba(96, 165, 250, 0.5);
+        }
+
+        .floor-card-6:hover {
+            box-shadow: 0 20px 60px rgba(167, 139, 250, 0.25), 0 0 40px rgba(167, 139, 250, 0.1);
+            border-color: rgba(167, 139, 250, 0.5);
+        }
+
+        .floor-card-glow {
+            position: absolute;
+            inset: 0;
+            opacity: 0;
+            transition: opacity 0.4s;
+            pointer-events: none;
+        }
+
+        .floor-card-2 .floor-card-glow {
+            background: radial-gradient(circle at 50% 100%, rgba(96, 165, 250, 0.15), transparent 70%);
+        }
+
+        .floor-card-6 .floor-card-glow {
+            background: radial-gradient(circle at 50% 100%, rgba(167, 139, 250, 0.15), transparent 70%);
+        }
+
+        .floor-card:hover .floor-card-glow {
+            opacity: 1;
+        }
+
+        .floor-card-content {
+            position: relative;
+            z-index: 1;
+            text-align: center;
+        }
+
+        .floor-card-icon {
+            font-size: 3.5rem;
+            margin-bottom: 1rem;
+            filter: drop-shadow(0 4px 8px rgba(0, 0, 0, 0.3));
+        }
+
+        .floor-card-floor {
+            font-size: 1.75rem;
+            font-weight: 700;
+            margin-bottom: 0.75rem;
+        }
+
+        .floor-card-2 .floor-card-floor {
+            background: linear-gradient(135deg, #60a5fa, #38bdf8);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+            background-clip: text;
+        }
+
+        .floor-card-6 .floor-card-floor {
+            background: linear-gradient(135deg, #a78bfa, #c084fc);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+            background-clip: text;
+        }
+
+        .floor-card-desc {
+            font-size: 0.85rem;
+            color: #94a3b8;
+            line-height: 1.5;
+            margin-bottom: 1.5rem;
+        }
+
+        .floor-card-arrow {
+            display: inline-flex;
+            align-items: center;
+            justify-content: center;
+            width: 48px;
+            height: 48px;
+            border-radius: 50%;
+            background: rgba(71, 85, 105, 0.3);
+            border: 1px solid rgba(71, 85, 105, 0.4);
+            color: #94a3b8;
+            transition: all 0.3s ease;
+        }
+
+        .floor-card:hover .floor-card-arrow {
+            transform: translateX(4px);
+        }
+
+        .floor-card-2:hover .floor-card-arrow {
+            background: rgba(96, 165, 250, 0.2);
+            border-color: rgba(96, 165, 250, 0.5);
+            color: #60a5fa;
+        }
+
+        .floor-card-6:hover .floor-card-arrow {
+            background: rgba(167, 139, 250, 0.2);
+            border-color: rgba(167, 139, 250, 0.5);
+            color: #a78bfa;
+        }
+
+        .landing-footer {
+            margin-top: 4rem;
+            text-align: center;
+            color: #94a3b8;
+            font-size: 0.75rem;
+            position: relative;
+            z-index: 1;
+            opacity: 0.6;
+        }
+
+        @media (max-width: 768px) {
+            .landing-title {
+                font-size: 1.6rem;
+            }
+
+            .landing-year {
+                font-size: 1.1rem;
+                letter-spacing: 5px;
+            }
+
+            .floor-cards {
+                flex-direction: column;
+                align-items: center;
+            }
+
+            .floor-card {
+                width: 100%;
+                max-width: 360px;
+                padding: 2rem 1.5rem;
+            }
+
+            .landing-wrapper {
+                padding: 1.5rem;
+            }
+        }
+    </style>
+</head>
+
+<body>
+    <div class="landing-wrapper">
+        <!-- Animated background particles -->
+        <div class="landing-bg">
+            <div class="particle particle-1"></div>
+            <div class="particle particle-2"></div>
+            <div class="particle particle-3"></div>
+            <div class="particle particle-4"></div>
+        </div>
+
+        <header class="landing-header">
+            <div class="landing-icon">🏛️</div>
+            <h1 class="landing-title">Denah BMN Biro MKKS</h1>
+            <p class="landing-year">2026</p>
+            <p class="landing-subtitle">Pilih lantai untuk melihat denah inventaris barang milik negara</p>
+        </header>
+
+        <div class="floor-cards">
+            <a href="lantai2.html" class="floor-card floor-card-2" id="card-lt2">
+                <div class="floor-card-glow"></div>
+                <div class="floor-card-content">
+                    <div class="floor-card-icon">🏢</div>
+                    <div class="floor-card-floor">Lantai 2</div>
+                    <div class="floor-card-desc">Area kerja operasional, dapur, printer, dan meja kerja K1–K14</div>
+                    <div class="floor-card-arrow">
+                        <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor"
+                            stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                            <path d="M5 12h14M12 5l7 7-7 7" />
+                        </svg>
+                    </div>
+                </div>
+            </a>
+
+            <a href="lantai6.html" class="floor-card floor-card-6" id="card-lt6">
+                <div class="floor-card-glow"></div>
+                <div class="floor-card-content">
+                    <div class="floor-card-icon">🏢</div>
+                    <div class="floor-card-floor">Lantai 6</div>
+                    <div class="floor-card-desc">Area pimpinan, ruang rapat, staf, pantry, dan ruang gym</div>
+                    <div class="floor-card-arrow">
+                        <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor"
+                            stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                            <path d="M5 12h14M12 5l7 7-7 7" />
+                        </svg>
+                    </div>
+                </div>
+            </a>
+        </div>
+
+        <footer class="landing-footer">
+            <p>© 2026 Biro MKKS — Sistem Informasi Denah BMN</p>
+        </footer>
+    </div>
+</body>
+
+</html>
